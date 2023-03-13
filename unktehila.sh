@@ -62,6 +62,7 @@ fi
 if [ -n "$domain" ]
 then
     wget -rSnd -np -l inf --spider -o "$output_dir/domain.txt" "$domain"
+    curl "https://urlscan.io/api/v1/search/?q=domain:$domain"
 fi
 
 # Email
